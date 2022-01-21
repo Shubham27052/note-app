@@ -1,13 +1,172 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  height: 100%;
+  width: 100%;
+
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  /* Contains the entire app */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* Left section of the app */
+.left-container {
+  /* Container of the entire left section */
+  border-right: 1px dashed rgb(0, 53, 83);
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+}
+
+.left-heading-container {
+  /* Contains the NOTE++ and the add Button */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.left-heading-container h1 {
+  font-size: 1.6rem;
+}
+
+.left-heading-container button {
+  background: transparent;
+  border: none;
+  color: rgb(29, 54, 163);
+  outline: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.left-notesList-container {
+  /* contains all the Notes Shorts */
+  font-size: 14px;
+}
+
+.notes-short-container {
+  /* contains each notes short */
+  border: 1.2px solid white;
+  padding: 0.7rem 0.5rem;
+  background: white;
+}
+.active {
+  background-color: rgb(46, 113, 212);
+}
+.notes-short-container:hover {
+  background: rgb(214, 230, 255);
+}
+.notes-short-title {
+  /* contains the title and delete button */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes-short-title h4 {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.notes-short-title button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: red;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.notes-short-container p {
+  /* contains the notes text preview */
+  font-size: 14px;
+}
+.notes-short-container span {
+  /* Contains the last modified and date statement */
+  font-size: 12px;
+}
+
+.no-note-heading {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 45%;
+  left: 58%;
+}
+
+/* Right Section of the app */
+
+.right-container {
+  /* Contains the entire right section */
+  background: rgb(214, 230, 255);
+  width: 70%;
+  height: 100%;
+  padding: 1rem;
+}
+.right-container-no-note {
+  background: rgb(214, 230, 255);
+  width: 70%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-title-container {
+  /* Contains the title input */
+  width: 100%;
+  height: 3rem;
+  margin: 0.7rem 0rem;
+}
+
+.right-title-container input {
+  /* Title input field */
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+.right-title-container input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+.right-text-container {
+  /* Contains the right notes text field */
+  width: 100%;
+  height: 50%;
+  margin: 0.7rem 0rem;
+}
+
+.right-text-container textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
